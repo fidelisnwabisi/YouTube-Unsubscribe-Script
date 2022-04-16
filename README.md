@@ -32,22 +32,22 @@ Bulk unsubscribing from YouTube requires you to run a script, but don’t worry,
 Follow these steps to mass unsubscribe:
 
   1. Go to your subscription manager by clicking on “Subscriptions.
-    ![You-Tube-mass-unsubscribe-1](https://user-images.githubusercontent.com/28998081/163663819-e6838350-7a34-4264-beda-d200ee701cfc.jpg)
+![You-Tube-mass-unsubscribe-1](https://user-images.githubusercontent.com/28998081/163663819-e6838350-7a34-4264-beda-d200ee701cfc.jpg)
 
   2. Click on “Manage” in the upper-right section.
-  ![You-Tube-mass-unsubscribe-2](https://user-images.githubusercontent.com/28998081/163663935-c7698816-b044-4438-803c-62da4592cfcb.jpg)
+![You-Tube-mass-unsubscribe-2](https://user-images.githubusercontent.com/28998081/163663935-c7698816-b044-4438-803c-62da4592cfcb.jpg)
 
   3. Scroll down to the “bottom” of your subscriptions or find an empty spot on the page. Right-click the empty area (shows cursor, not hand) and select the “Inspect Element” or “Inspect” option.
-  ![You-Tube-mass-unsubscribe-3](https://user-images.githubusercontent.com/28998081/163663944-d6df8a13-686b-4505-a6f0-82534b40b6ef.jpg)
+![You-Tube-mass-unsubscribe-3](https://user-images.githubusercontent.com/28998081/163663944-d6df8a13-686b-4505-a6f0-82534b40b6ef.jpg)
 
   4. Click on the Console tab, which is the second tab at the top.
-  ![You-Tube-mass-unsubscribe-4](https://user-images.githubusercontent.com/28998081/163663956-b88c485f-1299-44c9-aedf-ed7bb86da6c9.jpg)
+![You-Tube-mass-unsubscribe-4](https://user-images.githubusercontent.com/28998081/163663956-b88c485f-1299-44c9-aedf-ed7bb86da6c9.jpg)
 
   5. Scroll to the bottom of the console until you reach the “>” symbol.
-  ![You-Tube-mass-unsubscribe-5](https://user-images.githubusercontent.com/28998081/163663968-fc4720ca-bd6a-485d-a826-ce2065431fa2.jpg)
+![You-Tube-mass-unsubscribe-5](https://user-images.githubusercontent.com/28998081/163663968-fc4720ca-bd6a-485d-a826-ce2065431fa2.jpg)
 
   6. Copy the code below into the command field and press “Enter.” The Console should look like this while pasting the entire script:
- ![YouTube-mass-unsubscribe-6](https://user-images.githubusercontent.com/28998081/163663974-c9a570a6-a6c0-449f-a309-2aad91810602.jpg)
+![YouTube-mass-unsubscribe-6](https://user-images.githubusercontent.com/28998081/163663974-c9a570a6-a6c0-449f-a309-2aad91810602.jpg)
 
 Watch as your subscriptions disappear, one by one.
 ![YouTube-mass-unsubscribe-100](https://user-images.githubusercontent.com/28998081/163663991-8d826eca-c6d9-495c-ae7c-6210b912e69c.png)
