@@ -7,18 +7,18 @@ Unsubscribe from YouTube Channels One at a Time
 
 If you have lost interest in a YouTube channel, there are several ways to unsubscribe.
 
-    Clicking on one of the channel’s videos and clicking the gray “Subscribe” button to unsubscribe.
-    Clicking on the channel’s homepage and doing the same process as above.
-    Going to your Subscriptions page, choosing “Manage,” and unsubscribing to the listing.
-    Heading to your “Manage” page and running a script to bulk delete all subscriptions.
+1. Clicking on one of the channel’s videos and clicking the gray “Subscribe” button to unsubscribe.
+2. Clicking on the channel’s homepage and doing the same process as above.
+3. Going to your Subscriptions page, choosing “Manage,” and unsubscribing to the listing.
+4. Heading to your “Manage” page and running a script to bulk delete all subscriptions.
 
 You probably already know how to unsubscribe YouTube channels one by one, and know that it is very time-consuming. But, did you know you can go to the YouTube subscription manager and see all the channels you are subscribed to?
 
 View Your Existing YouTube Subscriptions List by doing the following:
 
-    Log in to your YouTube account.
-    Click on Subscriptions.
-    Click on “Manage” in the top-right corner.
+1. Log in to your YouTube account.
+2. Click on Subscriptions.
+3. Click on “Manage” in the top-right corner.
 
 You can now scroll through all of your subscriptions here and decide which ones you want to keep watching and which ones you want to get rid of. This method is excellent for YouTube users who are selective about their subscriptions and don’t want to lose all of them.
 
@@ -48,48 +48,50 @@ Follow these steps to mass unsubscribe:
 
   6. Copy the code below into the command field and press “Enter.” The Console should look like this while pasting the entire script:
 ![YouTube-mass-unsubscribe-6](https://user-images.githubusercontent.com/28998081/163663974-c9a570a6-a6c0-449f-a309-2aad91810602.jpg)
-/** 
-  * Youtube bulk unsubsribe fn.
- * Wrapping this in an IIFE for browser compatibility.
-  */
-(async function iife() {
-   // This is the time delay after which the "unsubscribe" button is "clicked"; Tweak to your liking!
-  var UNSUBSCRIBE_DELAY_TIME = 2000
- 
-/**
-  * Delay runner. Wraps `setTimeout` so it can be `await`ed on. 
- * @param {Function} fn 
-  * @param {number} delay 
- */
-   var runAfterDelay = (fn, delay) => new Promise((resolve, reject) => {
-    setTimeout(() => {
-       fn()
-      resolve()
-     }, delay)
-  })
- 
 
- 
-  // Get the channel list; this can be considered a row in the page.
-   var channels = Array.from(document.getElementsByTagName(`ytd-channel-renderer`))
-  console.log(`${channels.length} channels found.`)
- 
-  var ctr = 0
-   for (const channel of channels) {
-    // Get the subsribe button and trigger a "click"
-     channel.querySelector(`[aria-label^='Unsubscribe from']`).click()
-    await runAfterDelay(() => {
-       // Get the dialog container...
-      document.getElementsByTagName(`yt-confirm-dialog-renderer`)[0]
-         // and find the confirm button...
-        .querySelector(`#confirm-button`)
-         // and "trigger" the click!
-        .click()
-       console.log(`Unsubsribed ${ctr + 1}/${channels.length}`)
-      ctr++
-     }, UNSUBSCRIBE_DELAY_TIME)
-  }
- })()
+	/** 
+		* Youtube bulk unsubsribe fn.
+	 * Wrapping this in an IIFE for browser compatibility.
+		*/
+	(async function iife() {
+		 // This is the time delay after which the "unsubscribe" button is "clicked"; Tweak to your liking!
+		var UNSUBSCRIBE_DELAY_TIME = 2000
+
+	/**
+		* Delay runner. Wraps `setTimeout` so it can be `await`ed on. 
+	 * @param {Function} fn 
+		* @param {number} delay 
+	 */
+		 var runAfterDelay = (fn, delay) => new Promise((resolve, reject) => {
+			setTimeout(() => {
+				 fn()
+				resolve()
+			 }, delay)
+		})
+
+
+
+		// Get the channel list; this can be considered a row in the page.
+		 var channels = Array.from(document.getElementsByTagName(`ytd-channel-renderer`))
+		console.log(`${channels.length} channels found.`)
+
+		var ctr = 0
+		 for (const channel of channels) {
+			// Get the subsribe button and trigger a "click"
+			 channel.querySelector(`[aria-label^='Unsubscribe from']`).click()
+			await runAfterDelay(() => {
+				 // Get the dialog container...
+				document.getElementsByTagName(`yt-confirm-dialog-renderer`)[0]
+					 // and find the confirm button...
+					.querySelector(`#confirm-button`)
+					 // and "trigger" the click!
+					.click()
+				 console.log(`Unsubsribed ${ctr + 1}/${channels.length}`)
+				ctr++
+			 }, UNSUBSCRIBE_DELAY_TIME)
+		}
+	 })()
+
 
 Watch as your subscriptions disappear, one by one.
 ![YouTube-mass-unsubscribe-100](https://user-images.githubusercontent.com/28998081/163663991-8d826eca-c6d9-495c-ae7c-6210b912e69c.png)
